@@ -173,7 +173,12 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            if((a == 6 || b == 6) || (a + b == 6 || Math.Abs(a - b) == 6))
+            {
+                return true;
+            }
+            return false; 
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -187,7 +192,12 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+            if ((!outsideMode && (n >= 1 && n <= 10)) || (outsideMode && (n <= 1 || n >= 10)))
+            {
+                return true;
+            }
+            return false;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -200,7 +210,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool SpecialEleven(int n)
         {
-            throw new NotImplementedException();
+            if(n % 11 == 0 || (n % 11)-1 == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -213,7 +227,12 @@ namespace Exercises.Level1
         /// </summary>
         public bool More20(int n)
         {
-            throw new NotImplementedException();
+            if (n % 20 == 1 || n % 20 == 2)
+            {
+                return true;
+            }
+            return false;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -226,7 +245,12 @@ namespace Exercises.Level1
         /// </summary>
         public bool Old35(int n)
         {
-            throw new NotImplementedException();
+            if (n % 20 == (n % 3) || n % 20 == (n % 5))
+            {
+                return true;   
+            }
+            return false;
+            //throw new NotImplementedException();
         }
 
         /// <summary>

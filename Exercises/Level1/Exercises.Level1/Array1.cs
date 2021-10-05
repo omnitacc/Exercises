@@ -18,7 +18,14 @@ namespace Exercises.Level1
         /// </summary>
         public bool FirstLast6(int[] nums)
         {
-            throw new NotImplementedException();
+            bool isFirst = nums[0] == 6;
+
+            int lastIndex = nums.Length - 1;
+            bool isLast = nums[lastIndex] == 6;
+
+            return isFirst || isLast;
+
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -31,7 +38,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool SameFirstLast(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length > 0 && (nums[0] == nums[nums.Length - 1]))
+            {
+                return true;
+            }            
+            return false;
         }
 
         /// <summary>
@@ -41,7 +52,8 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MakePi()
         {
-            throw new NotImplementedException();
+            int[] array = { 3, 1, 4};
+            return array;
         }
 
         /// <summary>
@@ -54,7 +66,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool CommonEnd(int[] a, int[] b)
         {
-            throw new NotImplementedException();
+            if(a[0] == b[0] || a[a.Length-1] == b[b.Length-1]) 
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -66,7 +82,13 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum3(int[] nums)
         {
-            throw new NotImplementedException();
+            int summ = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                summ += nums[i];
+            }
+            return summ;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -79,7 +101,13 @@ namespace Exercises.Level1
         /// </summary>
         public int[] RotateLeft3(int[] nums)
         {
-            throw new NotImplementedException();
+            int[] array = new int[nums.Length];
+            for(int i = 0; i < nums.Length-1; i++) {
+                array[i] = nums[i + 1];
+            }
+            array[nums.Length-1] = nums[0];
+            return array;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -92,7 +120,13 @@ namespace Exercises.Level1
         /// </summary>
         public int[] Reverse3(int[] nums)
         {
-            throw new NotImplementedException();
+            int[] array = new int[nums.Length];
+            for (int i = 0; i <= nums.Length-1; i++)
+            {
+                array[i] = nums[nums.Length- 1- i];
+            }
+            return array;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
