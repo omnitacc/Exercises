@@ -17,7 +17,15 @@ namespace Exercises.Level1
         /// </summary>
         public int CountEvens(int[] nums)
         {
-            throw new NotImplementedException();
+            int eventCount = 0;
+
+            foreach (var num in nums)
+            {
+                if (num % 2 == 0)
+                    eventCount++;
+            }           
+            return eventCount;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -31,7 +39,16 @@ namespace Exercises.Level1
         /// </summary>
         public int BigDiff(int[] nums)
         {
-            throw new NotImplementedException();
+            int maxNum = 0;
+            int minNum = 99999;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                minNum = Math.Min(nums[i], minNum);
+                maxNum = Math.Max(nums[i], maxNum);
+
+            }
+            return maxNum - minNum;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -47,6 +64,7 @@ namespace Exercises.Level1
         /// </summary>
         public int CenteredAverage(int[] nums)
         {
+            //??????????????
             throw new NotImplementedException();
         }
 
@@ -61,7 +79,21 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum13(int[] nums)
         {
-            throw new NotImplementedException();
+            int totalSum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 13)
+                {
+                    i++;
+                    continue;
+                }
+                else
+                {
+                    totalSum += nums[i];
+                }
+            }
+            return totalSum;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
