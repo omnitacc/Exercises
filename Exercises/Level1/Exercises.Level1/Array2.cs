@@ -166,7 +166,26 @@ namespace Exercises.Level1
         /// </summary>
         public bool More14(int[] nums)
         {
-            throw new NotImplementedException();
+            int counter1 = 0;
+            int counter4 = 0;
+            bool result = false;
+            for (int i = 0; i < nums.Length; i++)
+            { 
+                if (nums[i] == 1)
+                {
+                    counter1++;
+                }
+                if (nums[i] == 4)
+                {
+                    counter4++;
+                }
+            }
+            if (counter1 <= counter4)
+                result = false;
+            else 
+                result = true;
+            return result;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
