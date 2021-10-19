@@ -64,8 +64,19 @@ namespace Exercises.Level1
         /// </summary>
         public int CenteredAverage(int[] nums)
         {
-            //??????????????
-            throw new NotImplementedException();
+
+            int maxNum = nums[0];
+            int minNum = nums[0];
+            int sum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                minNum = Math.Min(nums[i], minNum);
+                maxNum = Math.Max(nums[i], maxNum);
+                sum += nums[i];
+            }
+            int sumFinal = sum - minNum - maxNum;
+            return sumFinal / (nums.Length-2);
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -182,7 +193,20 @@ namespace Exercises.Level1
         /// </summary>
         public bool Only14(int[] nums)
         {
-            throw new NotImplementedException();
+            bool numb14 = false;
+            /**/
+            if(nums.Length > 0)
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    if (nums[i] == 1 || nums[i] == 4)
+                        numb14 = true;
+                    else
+                        return false;
+                }
+                else
+                return true; // why empty array is true (case in 8-th row)?!?!?!? it doesn't have any 1 or 4 inside...
+            return numb14;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -196,7 +220,14 @@ namespace Exercises.Level1
         /// </summary>
         public string[] FizzArray2(int nums)
         {
-            throw new NotImplementedException();
+            /**/string[] arr = new string[nums];
+            
+            for(int i = 0; i < nums; i++)
+            {
+                arr[i] = Convert.ToString(i);
+            }
+            return arr;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -208,7 +239,14 @@ namespace Exercises.Level1
         /// </summary>
         public bool No14(int[] nums)
         {
-            throw new NotImplementedException();
+            bool numb14 = false;
+            /**/for(int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 1 || nums[i] == 4)
+                    numb14 = !numb14;
+            }
+            return numb14;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -222,7 +260,19 @@ namespace Exercises.Level1
         /// </summary>
         public bool IsEverywhere(int[] nums, int val)
         {
-            throw new NotImplementedException();
+            /**/int found = 0;
+            foreach(int i in nums)
+            {
+                if (nums[i] == val)
+                {
+                    found++;
+                }
+            }
+            if (found > 1)
+                return true;
+            else
+                return false;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -235,7 +285,29 @@ namespace Exercises.Level1
         /// </summary>
         public bool Either24(int[] nums)
         {
-            throw new NotImplementedException();
+            bool result = false;
+            bool is2 = false;
+            for(int i = 0; i<nums.Length-1; i++)
+            {
+                if (nums[i] == nums[i + 1])
+                { 
+                    if (nums[i] == 2)
+                    {
+                        result = true;
+                        is2 = true;
+                        continue;
+                    }
+                    if (nums[i] == 4 && !is2)
+                    {
+                        result = true;
+                        continue;
+                    }
+                    else
+                        result = false;
+                }
+            }
+            return result;
+            //throw new NotImplementedException();
         }
 
         /// <summary>
